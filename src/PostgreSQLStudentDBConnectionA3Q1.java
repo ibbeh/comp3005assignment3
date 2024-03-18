@@ -8,6 +8,7 @@ Last Updated March 18, 2024
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Date;
 
 public class PostgreSQLStudentDBConnectionA3Q1 {
     public static void main(String[] args) {
@@ -41,3 +42,35 @@ public class PostgreSQLStudentDBConnectionA3Q1 {
 
     }
 }
+
+
+//Function retrieves and displays all records fromt he students table
+//Accepts a Connection object parameter for the database connection
+private static void getAllStudents(Connection connection) {
+
+}
+
+
+//Function inserts a new student record into the students table
+//Accepts a Connection object parameter for the database connection
+//Accepts strings first_name, last_name, email, and Date object enrollment_date for the attributes of the student to be inserted
+private static void addStudent(String first_name, String last_name, String email, Date enrollment_date) {
+
+}
+
+
+//Function updates the email address for a student with the specified student_id
+//Accepts a Connection object parameter for the database connection
+//Accepts an int student_id and a String new_email for the new student id and email of the student to be updated
+private static void updateStudentEmail(int student_id, String new_email) {
+
+}
+
+
+//Function deletes the record of the student with the specified student_id
+//Accepts a Connection object parameter for the database connection
+//Accepts an int student_id for the student id of the student to delete
+private static void deleteStudent(int student_id) {
+    
+}
+
