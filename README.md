@@ -47,5 +47,11 @@ java -cp ".;libraries/*;src" PostgreSQLStudentDBConnectionA3Q1
 
 ## NOTES:   
 - On Unix-based system, replace ';' with ':' in the classpath separator.  
-- Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.  
+- Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.
+
+# Functions Information
+- getAllStudents(): Retrieves and displays all records from the students table.
+- addStudent(first_name, last_name, email, enrollment_date): Inserts a new student record into the students table.
+- updateStudentEmail(student_id, new_email): Updates the email address for a student with the specified student_id.
+- deleteStudent(student_id): Deletes the record of the student with the specified student_id.
 
