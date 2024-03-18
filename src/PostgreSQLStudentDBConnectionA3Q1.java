@@ -31,11 +31,14 @@ public class PostgreSQLStudentDBConnectionA3Q1 {
             //If the connection object is not null then the connection to the PostgreSQL database was successful
             if(connection != null) {
                 System.out.println("Connected to PostgreSQL successfully!");
-
-                //getAllStudents(connection);
-                //addStudent(connection, "Mike", "Wazowski", "mikew@cmail.carleton.ca", java.sql.Date.valueOf(LocalDate.of(2020, 9, 1)));
-                //updateStudentEmail(connection, 7, "newmikew@cmail.carleton.ca");
-                //deleteStudent(connection, 7);
+                System.out.println("Calling getAllStudents() ...");
+                getAllStudents(connection);
+                System.out.println("Calling addStudent() ...");
+                addStudent(connection, "Mike", "Wazowski", "mikew@cmail.carleton.ca", java.sql.Date.valueOf(LocalDate.of(2020, 9, 1)));
+                System.out.println("Calling updateStudentEmail() ...");
+                updateStudentEmail(connection, 4, "newmikew@cmail.carleton.ca");
+                System.out.println("Calling deleteStudent() ...");
+                deleteStudent(connection, 4);
 
             }
             //Otherwise if the connection object is null the connection failed
