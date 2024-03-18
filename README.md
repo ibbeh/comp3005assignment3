@@ -6,6 +6,12 @@ Author: Ibraheenm Refai
 Student ID: 101259968  
 Last Updated: 2024-03-18  
 
+## Before Starting
+- Ensure you have the Java Development Kit (JDK) installed
+- Ensure you have pgAdmin4 or later installed
+- Create a database in pgAdmin and ensure it is compatible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file
+- Create the tables required and initialize data using the query tool in pgAdmin4. Run the query in the 'createAndInitializeStudentDB.sql' file in the sql directory
+
 # Video Demonstration
 -tbd
 
