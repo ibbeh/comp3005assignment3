@@ -33,8 +33,9 @@ public class PostgreSQLStudentDBConnectionA3Q1 {
                 System.out.println("Connected to PostgreSQL successfully!");
 
                 //getAllStudents(connection);
-                addStudent(connection, "Mike", "Wazowski", "mikew@cmail.carleton.ca", java.sql.Date.valueOf(LocalDate.of(2020, 9, 1)));
-
+                //addStudent(connection, "Mike", "Wazowski", "mikew@cmail.carleton.ca", java.sql.Date.valueOf(LocalDate.of(2020, 9, 1)));
+                //updateStudentEmail(connection, 7, "newmikew@cmail.carleton.ca");
+                //deleteStudent(connection, 7);
 
             }
             //Otherwise if the connection object is null the connection failed
@@ -114,14 +115,14 @@ public class PostgreSQLStudentDBConnectionA3Q1 {
         try {
             //Create a prepared statement using the connection
             PreparedStatement preparedStatement = connection.prepareStatement(SQLQuery);
-             //Set the values of the prepared statement placeholders to the method parameters provided
+            //Set the values of the prepared statement placeholders to the method parameters provided
             preparedStatement.setString(1, first_name);
             preparedStatement.setString(2, last_name);
             preparedStatement.setString(3, email);
             preparedStatement.setDate(4, enrollment_date);
             //Execute the insert query and get the number of rows inserted
-            int insertedRows = preparedStatement.executeUpdate();
-            if (insertedRows > 0) {
+            int insertedTuples = preparedStatement.executeUpdate();
+            if (insertedTuples > 0) {
                 System.out.println("Success: A new student was added successfully!");
             } else {
                 System.out.println("Error: No new students were added!");
@@ -140,16 +141,61 @@ public class PostgreSQLStudentDBConnectionA3Q1 {
     //Function updates the email address for a student with the specified student_id
     //Accepts a Connection object parameter for the database connection
     //Accepts an int student_id and a String new_email for the new student id and email of the student to be updated
-    private static void updateStudentEmail(int student_id, String new_email) {
+    private static void updateStudentEmail(Connection connection, int student_id, String new_email) {
+        //SQL query to update a student's email based on their student_id
+        String SQLQuery = "UPDATE students SET email = ? WHERE student_id = ?"; 
 
+        try {
+            //Create a prepared statement using the connection
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLQuery);
+            //Set the values of the prepared statement placeholders to the method parameters provided
+            preparedStatement.setString(1, new_email);
+            preparedStatement.setInt(2, student_id);
+            //Execute the update query and get the number of rows updated
+            int updatedTuples = preparedStatement.executeUpdate();
+            if (updatedTuples > 0) {
+                System.out.println("Success: The student with studentId " +student_id + "\'s email was updated successfully!");
+            } else {
+                System.out.println("Error: No student was updated! Make sure you entered a valid student_id.");
+            }
+            //Closing the prepared statement
+            preparedStatement.close();
+        }
+        //Catch exceptions that arise and print error message and stack trace for debugging
+        catch (SQLException e) {
+            System.out.println("Error updating the students' email! Error message: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
 
     //Function deletes the record of the student with the specified student_id
     //Accepts a Connection object parameter for the database connection
     //Accepts an int student_id for the student id of the student to delete
-    private static void deleteStudent(int student_id) {
+    private static void deleteStudent(Connection connection, int student_id) {
+        //SQL query to delete a student based on their student_id
+        String SQLQuery = "DELETE FROM students WHERE student_id = ?";
 
+        try {
+            //Create a prepared statement using the connection
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLQuery);
+            //Set the value of the prepared statement placeholder to the method parameter provided
+            preparedStatement.setInt(1, student_id);
+            //Execute the delete query and get the number of rows deleted
+            int deletedTuples = preparedStatement.executeUpdate();
+            if (deletedTuples > 0) {
+                System.out.println("Success: The student with studentID " + student_id + " was deleted successfully!");
+            } else {
+                System.out.println("Error: No student was deleted! Make sure you entered a valid student_id.");
+            }
+            //Closing the prepared statement
+            preparedStatement.close();
+        }
+        catch (SQLException e) {
+            //Catch exceptions that arise and print error message and stack trace for debugging
+            System.out.println("Error deleting the student! Error message: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
 }
