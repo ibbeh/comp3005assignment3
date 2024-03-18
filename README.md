@@ -2,12 +2,12 @@
 
 Database Interaction with PostgreSQL and Application Programming for COMP 3005 Assignment 3
 
-# Video Demonstration
--tbd
-
 Author: Ibraheenm Refai  
 Student ID: 101259968  
 Last Updated: 2024-03-18  
+
+# Video Demonstration
+-tbd
 
 # Directory Structure 
 ```
@@ -39,7 +39,7 @@ After successful compilation, from the root directory root directory of the proj
 java -cp ".;libraries/*;src" PostgreSQLStudentDBConnectionA3Q1
 ```
 
-NOTES: 
+NOTES:   
 On Unix-based system, replace ';' with ':' in the classpath separator.  
 Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.  
 
