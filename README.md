@@ -23,15 +23,18 @@ COMP_3005_Assignment_3/
 │   └── createAndInitializeStudentDB.sql
 │
 └── README.md
+```
 
 # Compilation & Execution Instructions
 
 Navigate to the root directory of the project (COMP_3005_Assignment_3/) and run the following command in a terminal to compile PostgreSQLStudentDBConnectionA3Q1.java:
 
+```bash
 > javac -cp ".;libraries/*" src/PostgreSQLStudentDBConnectionA3Q1.java -d src
 
 After successful compilation, from the root directiry root directory of the project (COMP_3005_Assignment_3/), run the application by executing the following command in a terminal: 
 
+```bash
 > java -cp ".;libraries/*;src" PostgreSQLStudentDBConnectionA3Q1
 
 NOTES: 
