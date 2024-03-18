@@ -12,8 +12,10 @@ Last Updated: 2024-03-18
 - Create a database in pgAdmin and ensure it is compatible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file
 - Create the tables required and initialize data using the query tool in pgAdmin4. Run the query in the 'createAndInitializeStudentDB.sql' file in the sql directory
 
-# Video Demonstration
--tbd
+# Video Demonstration (IMPORTANT)
+https://youtu.be/z4wEbmgiYgQ
+OR
+https://youtu.be/z4wEbmgiYgQ?si=aDTD6WXtgCp5dajP
 
 # Directory Structure 
 ```
