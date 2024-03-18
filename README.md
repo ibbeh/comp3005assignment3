@@ -2,7 +2,7 @@
 
 Database Interaction with PostgreSQL and Application Programming for COMP 3005 Assignment 3
 
-Author: Ibraheenm Refai  
+Author: Ibraheem Refai  
 Student ID: 101259968  
 Last Updated: 2024-03-18  
 
