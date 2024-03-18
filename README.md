@@ -12,8 +12,10 @@ Last Updated: 2024-03-18
 - Create a database in pgAdmin and ensure it is compatible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file
 - Create the tables required and initialize data using the query tool in pgAdmin4. Run the query in the 'createAndInitializeStudentDB.sql' file in the sql directory
 
-# Video Demonstration
--tbd
+# Video Demonstration (IMPORTANT)
+https://youtu.be/z4wEbmgiYgQ
+OR
+https://youtu.be/z4wEbmgiYgQ?si=aDTD6WXtgCp5dajP
 
 # Directory Structure 
 ```
@@ -47,5 +49,11 @@ java -cp ".;libraries/*;src" PostgreSQLStudentDBConnectionA3Q1
 
 ## NOTES:   
 - On Unix-based system, replace ';' with ':' in the classpath separator.  
-- Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.  
+- Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.
+
+# Functions Information
+- getAllStudents(): Retrieves and displays all records from the students table.
+- addStudent(first_name, last_name, email, enrollment_date): Inserts a new student record into the students table.
+- updateStudentEmail(student_id, new_email): Updates the email address for a student with the specified student_id.
+- deleteStudent(student_id): Deletes the record of the student with the specified student_id.
 
