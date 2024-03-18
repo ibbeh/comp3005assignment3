@@ -39,7 +39,7 @@ After successful compilation, from the root directory root directory of the proj
 java -cp ".;libraries/*;src" PostgreSQLStudentDBConnectionA3Q1
 ```
 
-NOTES:   
-On Unix-based system, replace ';' with ':' in the classpath separator.  
-Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.  
+## NOTES:   
+- On Unix-based system, replace ';' with ':' in the classpath separator.  
+- Ensure your PostgreSQL database is running and accessible with the credentials and URL specified in the PostgreSQLStudentDBConnectionA3Q1.java file.  
 
